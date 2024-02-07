@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+
+    <changeSet id="002" author="ad">
+        <createTable tableName="reservation">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="client_id" type="BIGINT" />
+
+            <!--column
+            name="macdonald_id" type="BIGINT" />
+            <column name="kfc_id" type="BIGINT" />
+            <column name="dagrasso_id" type="BIGINT" /-->
+
+            <column name="amount" type="DECIMAL" />
+            <column name="status" type="INT"></column>
+
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

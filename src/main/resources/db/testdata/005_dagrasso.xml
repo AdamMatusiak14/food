@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="005-testdata-5" author="ad">
+        <insert tableName="DaGrasso">
+            <column name="name" value="DaGrasso" />
+            <column name="dish" value="Margherita" />
+            <column name="price" value="15.49" />
+
+        </insert>
+
+        <insert tableName="DaGrasso">
+            <column name="name" value="DaGrasso" />
+            <column name="dish" value="Capricciosa" />
+            <column name="price" value="18.58" />
+
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>

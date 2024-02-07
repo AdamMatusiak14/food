@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+
+</head>
+
+<body>
+
+    <header th:replace="fragments/header :: ShopHeader">
+        <span class="title"></span>
+    </header>
+
+    <div>
+        <ul>
+            <li th:each="restaurant:${restaurants}">
+                <a th:href="@{'/show/'+${restaurant.name}}"><span th:text="${restaurant.name}" /></a><br>
+                Min: <span th:text="${restaurant.minPrice}" /><br>
+                Darmowa dostawa: <span th:text="${restaurant.freeDelivery}" />
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>>

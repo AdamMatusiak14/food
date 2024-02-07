@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <h1>ok</h1>
+    <div>
+        <table th:each="reservation:${reservationList}">
+            <tr>
+                <td>Client</td>
+                <td><span th:text="${reservation.client.name}"></span></td>
+            </tr>
+            <tr>
+                <td>Kwota</td>
+                <td><span th:text="${reservation.amount}"></span></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td><span th:text="${reservation.status}"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/change" th:method="put" th:object="${dtoStatus} ">
+                        <label><input type=radio th:field="*{status}" th:value="PREPARATION" />Preparation</label>
+                        <label><input type=radio th:field="*{status}" th:value="WAY" />Way</label>
+                        <label><input type=radio th:field="*{status}" th:value="DELIVERY" />Delivery</label>
+                        <input type="hidden" name="id" th:value="${reservation.id}" /><br>
+                        <button type="submit">Zmień Status</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/orders" method="post">
+                        <input type="hidden" name="id" th:value="${reservation.id}" />
+                        <button type="submit">Zamówienie</button>
+                    </form>
+                </td>
+
+            </tr>
+
+
+
+        </table>
+
+    </div>
+</body>
+
+</html>
