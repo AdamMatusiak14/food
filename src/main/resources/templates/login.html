@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <form action="" method="post" th:object="${dtoClient}">
+        <label>Login:<input type="text" th:field="*{name}" /> </label>
+        <label>Phone number:<input type="text" th:field="*{phone}" /></label>
+        <button type="submit">Zaloguj</button>
+    </form>
+</body>
+
+</html>

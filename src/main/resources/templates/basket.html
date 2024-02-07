@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Basket</title>
+</head>
+
+<body>
+
+    <header th:replace="fragments/header :: ShopHeader">
+        <span class="title"></span>
+    </header>
+
+    <table>
+        <tr th:each="Dish:${@basket.ListOfDish}">
+            <td th:text="${Dish.dish}"></td>
+            <td th:text="${Dish.price}"></td>
+            <td>
+                <a th:href="@{'/order/remove/' + ${Dish.id}}">X</a>
+            </td>
+        </tr>
+    </table>
+
+    <div>
+        <p><span>Koszt zamówienia: </span><span th:text="${@basket.sum}"></span>zł</p>
+    </div>
+
+    <div>
+        <a th:href="@{/order/amount}">Kwota</a>
+        <div th:if="${dtoCoast.flag}">
+            <!--tu skończyłeś-->
+            <table>
+                <tr>
+                    <td>Razem: </td>
+                    <td th:text="${dtoCoast.allDishesCoast}"></td>
+                </tr>
+                <tr>
+                    <td>Koszt Dostawy: </td>
+                    <td th:text="${dtoCoast.deliveryCoast}"></td>
+                </tr>
+                <tr>
+                    <td>Cena całkowita: </td>
+                    <td th:text="${dtoCoast.allCoast}"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <a th:href="@{/order/client}">Kasa</a>
+</body>
+
+</html>

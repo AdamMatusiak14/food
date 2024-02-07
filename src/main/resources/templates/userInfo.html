@@ -1,0 +1,23 @@
+<<!DOCTYPE html>
+
+    <html xmlns:th="http://www.thymeleaf.org">
+    <html>
+
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <h1>Dande osoowe</h1>
+        <form th:action="@{/order/saveOrder}" method="post" th:object="${client}">
+            Imie: <input type="text" th:field="*{name}" /><br>
+            Adres: <input type="text" th:field="*{address}" /><br>
+            Telefon: <input type="text" th:field="*{phone}" /><br>
+            <button type="submit">Zapisz</button>
+        </form>
+    </body>
+
+    </html>

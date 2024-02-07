@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <include file="001_create_table_client.xml" relativeToChangelogFile="true" />
+    <include
+        file="002_create_table_reservation.xml" relativeToChangelogFile="true" />
+
+    <include file="003_create_table_macdonald.xml" relativeToChangelogFile="true" />
+    <include file="004_create_table_kfc.xml" relativeToChangelogFile="true" />
+    <include
+        file="005_create_table_dagrasso.xml" relativeToChangelogFile="true" />
+    <include
+        file="006_create_table_restaurant_info.xml" relativeToChangelogFile="true" />
+    <include file="007_create_table_local.xml" relativeToChangelogFile="true" />
+    <include
+        file="testdata/001_client.xml" relativeToChangelogFile="true" />
+    <include file="testdata/003_macdonald.xml" relativeToChangelogFile="true" />
+    <include file="testdata/004_kfc.xml" relativeToChangelogFile="true" />
+    <include
+        file="testdata/005_dagrasso.xml" relativeToChangelogFile="true" />
+    <include
+        file="testdata/006_restaurant_info.xml" relativeToChangelogFile="true" />
+
+
+</databaseChangeLog>
