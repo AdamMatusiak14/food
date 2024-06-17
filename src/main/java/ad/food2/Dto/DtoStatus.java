@@ -1,5 +1,7 @@
 package ad.food2.Dto;
 
+import java.util.Objects;
+
 import ad.food2.object.Status;
 
 public class DtoStatus {
@@ -30,5 +32,20 @@ public class DtoStatus {
     public void setStatus(Status status) {
         this.status = status;
     }
+
+    // @Override
+    // public boolean equals(Object o) {
+    // if (this == o)
+    // return true;
+    // if (o == null || getClass() != o.getClass())
+    // return false;
+    // DtoStatus dtoStatus = (DtoStatus) o;
+    // return status == dtoStatus.status;
+    // }
+
+    // @Override
+    // public int hashCode() {
+    // return Objects.hash(status);
+    // }
 
 }
