@@ -69,9 +69,10 @@ public class DishService {
                 return "/showMenu";
             case "DaGrasso":
                 List<DaGrasso> DaGrassoList = daGrassoRepository.findAll();
-                model.addAttribute("ListofDish", DaGrassoList);
+                model.addAttribute("ListOfDish", DaGrassoList);
                 String DaGrasso = "DaGrasso";
                 model.addAttribute("Restaurant", DaGrasso);
+                return "/showMenu";
 
         }
         return "/showMenu";
