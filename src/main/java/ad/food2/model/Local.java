@@ -27,6 +27,10 @@ public class Local {
     public Local() {
     }
 
+    public Local(Long id) {
+        this.id = id;
+    }
+
     public Local(Long id, String name, String dish, BigDecimal price, Reservation reservation) {
         this.id = id;
         this.name = name;

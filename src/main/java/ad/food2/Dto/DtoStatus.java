@@ -1,5 +1,7 @@
 package ad.food2.Dto;
 
+import java.util.Objects;
+
 import ad.food2.object.Status;
 
 public class DtoStatus {

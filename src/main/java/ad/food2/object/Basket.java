@@ -62,6 +62,7 @@ public class Basket {
     public void cleanSum() {
         sum = BigDecimal.ZERO;
         ListOfDish.clear(); // Tu skończyłeś, musisz przejśc ścieżkę po koleji, żeby zobaczyć co się dzieje
+
     }
 
     public List<Restaurant> getListOfDish() {
